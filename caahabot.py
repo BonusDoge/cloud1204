@@ -4,11 +4,9 @@
 
 """
 Simple Bot to reply to Telegram messages.
-
 First, a few handler functions are defined. Then, those functions are passed to
 the Dispatcher and registered at their respective places.
 Then, the bot is started and runs until we press Ctrl-C on the command line.
-
 Usage:
 Basic Echobot example, repeats messages.
 Press Ctrl-C on the command line or send a signal to the process to stop the
@@ -52,8 +50,7 @@ def echo(update: Update, context: CallbackContext) -> None:
 def main() -> None:
     """Start the bot."""
     # Create the Updater and pass it your bot's token.
-    with open('token') as f:
-        updater = Updater(f.read().strip())
+    updater = Updater("TOKEN")
 
     # Get the dispatcher to register handlers
     dispatcher = updater.dispatcher
